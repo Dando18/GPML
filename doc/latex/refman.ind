@@ -1,0 +1,108 @@
+\begin{theindex}
+
+  \item {/home/daniel/dev/cpp/math/include/\+Matrix.\+hpp}, 
+		\hyperpage{13}
+  \item {/home/daniel/dev/cpp/math/include/typedefs.\+h}, 
+		\hyperpage{18}
+  \item {$\sim$\+Matrix}
+    \subitem {math\+::\+Matrix}, \hyperpage{7}
+
+  \indexspace
+
+  \item {at}
+    \subitem {math\+::\+Matrix}, \hyperpage{7}
+
+  \indexspace
+
+  \item {cols}
+    \subitem {math\+::\+Matrix}, \hyperpage{7}
+
+  \indexspace
+
+  \item {d\+Matrix}
+    \subitem {Matrix.\+hpp}, \hyperpage{14}
+
+  \indexspace
+
+  \item {f\+Matrix}
+    \subitem {Matrix.\+hpp}, \hyperpage{14}
+
+  \indexspace
+
+  \item {i\+Matrix}
+    \subitem {Matrix.\+hpp}, \hyperpage{14}
+
+  \indexspace
+
+  \item {math\+::\+Matrix}
+    \subitem {$\sim$\+Matrix}, \hyperpage{7}
+    \subitem {at}, \hyperpage{7}
+    \subitem {cols}, \hyperpage{7}
+    \subitem {Matrix}, \hyperpage{6}
+    \subitem {operator$\ast$=}, \hyperpage{7, 8}
+    \subitem {operator+=}, \hyperpage{8}
+    \subitem {operator-\/=}, \hyperpage{9}
+    \subitem {operator/=}, \hyperpage{9}
+    \subitem {operator=}, \hyperpage{10}
+    \subitem {rows}, \hyperpage{10}
+    \subitem {set}, \hyperpage{10}
+    \subitem {shape}, \hyperpage{11}
+    \subitem {size}, \hyperpage{11}
+  \item {math\+::\+Matrix$<$ N $>$}, \hyperpage{5}
+  \item {Matrix}
+    \subitem {math\+::\+Matrix}, \hyperpage{6}
+  \item {Matrix.\+hpp}
+    \subitem {d\+Matrix}, \hyperpage{14}
+    \subitem {f\+Matrix}, \hyperpage{14}
+    \subitem {i\+Matrix}, \hyperpage{14}
+    \subitem {operator$\ast$}, \hyperpage{15}
+    \subitem {operator+}, \hyperpage{16}
+    \subitem {operator-\/}, \hyperpage{16}
+    \subitem {operator/}, \hyperpage{17}
+
+  \indexspace
+
+  \item {operator$\ast$}
+    \subitem {Matrix.\+hpp}, \hyperpage{15}
+  \item {operator$\ast$=}
+    \subitem {math\+::\+Matrix}, \hyperpage{7, 8}
+  \item {operator+}
+    \subitem {Matrix.\+hpp}, \hyperpage{16}
+  \item {operator+=}
+    \subitem {math\+::\+Matrix}, \hyperpage{8}
+  \item {operator-\/}
+    \subitem {Matrix.\+hpp}, \hyperpage{16}
+  \item {operator-\/=}
+    \subitem {math\+::\+Matrix}, \hyperpage{9}
+  \item {operator/}
+    \subitem {Matrix.\+hpp}, \hyperpage{17}
+  \item {operator/=}
+    \subitem {math\+::\+Matrix}, \hyperpage{9}
+  \item {operator=}
+    \subitem {math\+::\+Matrix}, \hyperpage{10}
+
+  \indexspace
+
+  \item {rows}
+    \subitem {math\+::\+Matrix}, \hyperpage{10}
+
+  \indexspace
+
+  \item {set}
+    \subitem {math\+::\+Matrix}, \hyperpage{10}
+  \item {shape}
+    \subitem {math\+::\+Matrix}, \hyperpage{11}
+  \item {size}
+    \subitem {math\+::\+Matrix}, \hyperpage{11}
+
+  \indexspace
+
+  \item {typedefs.\+h}
+    \subitem {uint}, \hyperpage{18}
+
+  \indexspace
+
+  \item {uint}
+    \subitem {typedefs.\+h}, \hyperpage{18}
+
+\end{theindex}

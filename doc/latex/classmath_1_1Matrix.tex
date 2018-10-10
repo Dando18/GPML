@@ -36,9 +36,9 @@ std\+::pair$<$ \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}, 
 \item 
 \hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a046b9f4717da34fb08795cb461497084}{operator-\/=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
 \item 
-\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_aa5af962938db227b32efbf3ccb34ddba}{operator$\ast$=} (const N \&scal)
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a1704c2b9fd200a6854b6793524a15700}{operator$\ast$=} (const N \&scal)
 \item 
-\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_ad5bce304ff86d69014b10c3e3a58b8a7}{operator$\ast$=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a4dbf1e0c5f42ce314ea2510a025b7e2a}{operator$\ast$=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
 \item 
 \hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a6a0a90575952ca84cac100cb40a5e9d0}{operator/=} (const N \&scal)
 \item 
@@ -142,12 +142,12 @@ Get element at r, c of the matrix 0-\/indexed.
 Get the number of columns in the matrix. \begin{DoxyReturn}{Returns}
 the number of columns in the matrix 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmath_1_1Matrix_aa5af962938db227b32efbf3ccb34ddba}\label{classmath_1_1Matrix_aa5af962938db227b32efbf3ccb34ddba}} 
+\mbox{\Hypertarget{classmath_1_1Matrix_a1704c2b9fd200a6854b6793524a15700}\label{classmath_1_1Matrix_a1704c2b9fd200a6854b6793524a15700}} 
 \index{math\+::\+Matrix@{math\+::\+Matrix}!operator$\ast$=@{operator$\ast$=}}
 \index{operator$\ast$=@{operator$\ast$=}!math\+::\+Matrix@{math\+::\+Matrix}}
 \subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename N$>$ \\
-\hyperlink{classmath_1_1Matrix}{Matrix}\& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const N \&}]{scal }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const N \&}]{scal }\end{DoxyParamCaption})}
 
 Adds Multiplies {\ttfamily this} by scaler {\ttfamily scal} 
 \begin{DoxyParams}{Parameters}
@@ -157,12 +157,12 @@ Adds Multiplies {\ttfamily this} by scaler {\ttfamily scal}
 \begin{DoxyReturn}{Returns}
 a pointer to {\ttfamily m} after multiplication 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmath_1_1Matrix_ad5bce304ff86d69014b10c3e3a58b8a7}\label{classmath_1_1Matrix_ad5bce304ff86d69014b10c3e3a58b8a7}} 
+\mbox{\Hypertarget{classmath_1_1Matrix_a4dbf1e0c5f42ce314ea2510a025b7e2a}\label{classmath_1_1Matrix_a4dbf1e0c5f42ce314ea2510a025b7e2a}} 
 \index{math\+::\+Matrix@{math\+::\+Matrix}!operator$\ast$=@{operator$\ast$=}}
 \index{operator$\ast$=@{operator$\ast$=}!math\+::\+Matrix@{math\+::\+Matrix}}
 \subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename N$>$ \\
-\hyperlink{classmath_1_1Matrix}{Matrix}\& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
 
 Performs matrix multiplication between {\ttfamily this} and {\ttfamily m}. This operation will throw an exception if {\ttfamily cols!=m.\+rows()}. It will also reshape {\ttfamily this} to that {\ttfamily \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()}} does not change and {\ttfamily \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()}} becomes {\ttfamily m.\+cols()}. 
 \begin{DoxyParams}{Parameters}
