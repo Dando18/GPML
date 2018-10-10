@@ -1,0 +1,191 @@
+\hypertarget{Matrix_8hpp}{}\section{/home/daniel/dev/cpp/math/include/\+Matrix.hpp File Reference}
+\label{Matrix_8hpp}\index{/home/daniel/dev/cpp/math/include/\+Matrix.\+hpp@{/home/daniel/dev/cpp/math/include/\+Matrix.\+hpp}}
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}typedefs.\+h\char`\"{}}\newline
+Include dependency graph for Matrix.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{Matrix_8hpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix$<$ N $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmath_1_1Matrix}{Matrix} generic class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Matrix$<$ int $>$ \hyperlink{Matrix_8hpp_a09ee7d97ee3fb530f80cac82780711f8}{math\+::i\+Matrix}
+\item 
+typedef Matrix$<$ float $>$ \hyperlink{Matrix_8hpp_adb88834810480e2f18cf3d74a3954311}{math\+::f\+Matrix}
+\item 
+typedef Matrix$<$ double $>$ \hyperlink{Matrix_8hpp_a65b4179533da3857354550916c3ef90b}{math\+::d\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a6e8f7c0c49b91a302a3c98c764d1bcf8}{math\+::operator+} (Matrix$<$ N $>$ lhs, const Matrix$<$ N $>$ \&rhs)
+\item 
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a8ae244dbcf4436affb20910813b7637e}{math\+::operator-\/} (Matrix$<$ N $>$ lhs, const Matrix$<$ N $>$ \&rhs)
+\item 
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a15551755ee6e1d8bc565939b7871cd93}{math\+::operator$\ast$} (Matrix$<$ N $>$ lhs, const N \&rhs)
+\item 
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_afae6dfd51873fdf265a819f069ec2244}{math\+::operator$\ast$} (const N \&lhs, Matrix$<$ N $>$ rhs)
+\item 
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a66c4aedee806ac605abc38c2b528e374}{math\+::operator/} (Matrix$<$ N $>$ lhs, const N \&rhs)
+\item 
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_ab82237960c54e9b78d0721613a773ba9}{math\+::operator$\ast$} (Matrix$<$ N $>$ lhs, const Matrix$<$ N $>$ \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains Matrix class definition and implementation. \begin{DoxyAuthor}{Author}
+Daniel Nichols 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2018 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{Matrix_8hpp_file_a65b4179533da3857354550916c3ef90b}\label{Matrix_8hpp_file_a65b4179533da3857354550916c3ef90b}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!d\+Matrix@{d\+Matrix}}
+\index{d\+Matrix@{d\+Matrix}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{d\+Matrix}{dMatrix}}
+{\footnotesize\ttfamily typedef Matrix$<$double$>$ \hyperlink{Matrix_8hpp_a65b4179533da3857354550916c3ef90b}{math\+::d\+Matrix}}
+
+double precision matrix \mbox{\Hypertarget{Matrix_8hpp_file_adb88834810480e2f18cf3d74a3954311}\label{Matrix_8hpp_file_adb88834810480e2f18cf3d74a3954311}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!f\+Matrix@{f\+Matrix}}
+\index{f\+Matrix@{f\+Matrix}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{f\+Matrix}{fMatrix}}
+{\footnotesize\ttfamily typedef Matrix$<$float$>$ \hyperlink{Matrix_8hpp_adb88834810480e2f18cf3d74a3954311}{math\+::f\+Matrix}}
+
+float precision matrix \mbox{\Hypertarget{Matrix_8hpp_file_a09ee7d97ee3fb530f80cac82780711f8}\label{Matrix_8hpp_file_a09ee7d97ee3fb530f80cac82780711f8}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!i\+Matrix@{i\+Matrix}}
+\index{i\+Matrix@{i\+Matrix}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{i\+Matrix}{iMatrix}}
+{\footnotesize\ttfamily typedef Matrix$<$int$>$ \hyperlink{Matrix_8hpp_a09ee7d97ee3fb530f80cac82780711f8}{math\+::i\+Matrix}}
+
+integer matrix 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Matrix_8hpp_file_a15551755ee6e1d8bc565939b7871cd93}\label{Matrix_8hpp_file_a15551755ee6e1d8bc565939b7871cd93}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+Matrix$<$N$>$ math\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const N \&}]{rhs }\end{DoxyParamCaption})}
+
+Multiplies lhs and scalar rhs. Copies lhs and multiplies by scalar rhs 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & -\/ left hand side matrix \\
+\hline
+{\em rhs} & -\/ right hand side scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix with elements multiplication of {\ttfamily lhs} and {\ttfamily rhs} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Matrix_8hpp_file_afae6dfd51873fdf265a819f069ec2244}\label{Matrix_8hpp_file_afae6dfd51873fdf265a819f069ec2244}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+Matrix$<$N$>$ math\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const N \&}]{lhs,  }\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{rhs }\end{DoxyParamCaption})}
+
+Multiplies scalar lhs and matrix rhs. Copies rhs and multiplies by scalar lhs 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & -\/ left hand side scalar \\
+\hline
+{\em rhs} & -\/ right hand side matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix with elements multiplication of {\ttfamily lhs} and {\ttfamily rhs} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Matrix_8hpp_file_ab82237960c54e9b78d0721613a773ba9}\label{Matrix_8hpp_file_ab82237960c54e9b78d0721613a773ba9}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+Matrix$<$N$>$ math\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+Performs matrix multiplication of {\ttfamily rhs} and {\ttfamily lhs} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & -\/ left hand side matrix \\
+\hline
+{\em rhs} & -\/ right hand side matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix resulting from matrix multiplication. Result will have shape {\ttfamily lhs.\+rows()}, {\ttfamily rhs.\+cols()}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & if {\ttfamily lhs.\+cols() != rhs.\+rows()} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{Matrix_8hpp_file_a6e8f7c0c49b91a302a3c98c764d1bcf8}\label{Matrix_8hpp_file_a6e8f7c0c49b91a302a3c98c764d1bcf8}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!operator+@{operator+}}
+\index{operator+@{operator+}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+Matrix$<$ N $>$ math\+::operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+Adds lhs and rhs matrices element-\/wise. Copies lhs and add rhs to it. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & -\/ left hand side matrix of addition \\
+\hline
+{\em rhs} & -\/ right hand side matrix of addition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix with elements from element-\/wise addition of {\ttfamily lhs} and {\ttfamily rhs} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & if {\ttfamily lhs} and {\ttfamily rhs} do not have same shape \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{Matrix_8hpp_file_a8ae244dbcf4436affb20910813b7637e}\label{Matrix_8hpp_file_a8ae244dbcf4436affb20910813b7637e}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+Matrix$<$N$>$ math\+::operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+Subtracts lhs and rhs matrices element-\/wise. Copies lhs and subtract rhs from it. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & -\/ left hand side matrix of subtraction \\
+\hline
+{\em rhs} & -\/ right hand side matrix of subtraction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix with elements from element-\/wise subtraction of {\ttfamily lhs} and {\ttfamily rhs} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & if {\ttfamily lhs} and {\ttfamily rhs} do not have same shape \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{Matrix_8hpp_file_a66c4aedee806ac605abc38c2b528e374}\label{Matrix_8hpp_file_a66c4aedee806ac605abc38c2b528e374}} 
+\index{Matrix.\+hpp@{Matrix.\+hpp}!operator/@{operator/}}
+\index{operator/@{operator/}!Matrix.\+hpp@{Matrix.\+hpp}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+Matrix$<$N$>$ math\+::operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const N \&}]{rhs }\end{DoxyParamCaption})}
+
+Divides lhs matrix by scalar rhs. Copies lhs and divides by scalar rhs. Does not check if rhs is zero due to unknown type of {\ttfamily N}. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & -\/ left hand side matrix \\
+\hline
+{\em rhs} & -\/ right hand side scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix with elements division of {\ttfamily lhs} and {\ttfamily rhs} 
+\end{DoxyReturn}

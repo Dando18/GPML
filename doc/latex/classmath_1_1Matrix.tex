@@ -1,0 +1,305 @@
+\hypertarget{classmath_1_1Matrix}{}\section{math\+:\+:Matrix$<$ N $>$ Class Template Reference}
+\label{classmath_1_1Matrix}\index{math\+::\+Matrix$<$ N $>$@{math\+::\+Matrix$<$ N $>$}}
+
+
+\hyperlink{classmath_1_1Matrix}{Matrix} generic class.  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmath_1_1Matrix_a766801644c0b1118db51d3d107daa732}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}{size}, N fill)
+\item 
+\hyperlink{classmath_1_1Matrix_a0ba68b8b43efb8402dbecc0531df0bb5}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows}, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols}, N fill)
+\item 
+\hyperlink{classmath_1_1Matrix_a24169476532305f1bb8229653274a5ba}{Matrix} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
+\item 
+N \hyperlink{classmath_1_1Matrix_aac510ef186a6bbf176d0ef4d79a7c666}{at} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} r, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} c) const
+\item 
+void \hyperlink{classmath_1_1Matrix_afbf9ebd6114faec44e9eccb553ca8f33}{set} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} r, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} c, N val)
+\item 
+std\+::pair$<$ \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} $>$ \hyperlink{classmath_1_1Matrix_afbbadd025c9d60f4447cee97fd7c727d}{shape} () const
+\item 
+\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows} () const
+\item 
+\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols} () const
+\item 
+\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}{size} () const
+\item 
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a8bf5d371b703ef3023742c4058f709a7}{operator=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
+\item 
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_ae2944c1e1a0f1958101db2197bcfaa3c}{operator+=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
+\item 
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a046b9f4717da34fb08795cb461497084}{operator-\/=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
+\item 
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_aa5af962938db227b32efbf3ccb34ddba}{operator$\ast$=} (const N \&scal)
+\item 
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_ad5bce304ff86d69014b10c3e3a58b8a7}{operator$\ast$=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
+\item 
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a6a0a90575952ca84cac100cb40a5e9d0}{operator/=} (const N \&scal)
+\item 
+\hyperlink{classmath_1_1Matrix_afd52712eaef5a16115d605b7866a0576}{$\sim$\+Matrix} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename N$>$\newline
+class math\+::\+Matrix$<$ N $>$}
+
+\hyperlink{classmath_1_1Matrix}{Matrix} generic class. 
+
+\begin{DoxyAuthor}{Author}
+Daniel Nichols 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2018 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmath_1_1Matrix_a766801644c0b1118db51d3d107daa732}\label{classmath_1_1Matrix_a766801644c0b1118db51d3d107daa732}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{size,  }\item[{N}]{fill }\end{DoxyParamCaption})}
+
+Square matrix constructor. Creates a size$\ast$size matrix with every value set to fill. 
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ size of the rows and cols of the matrix \\
+\hline
+{\em fill} & -\/ default value for every entry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1Matrix_a0ba68b8b43efb8402dbecc0531df0bb5}\label{classmath_1_1Matrix_a0ba68b8b43efb8402dbecc0531df0bb5}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{rows,  }\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{cols,  }\item[{N}]{fill }\end{DoxyParamCaption})}
+
+\hyperlink{classmath_1_1Matrix}{Matrix} constructor. Creates a rows$\ast$cols matrix with every value set to fill. 
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ number of rows \\
+\hline
+{\em cols} & -\/ number of cols \\
+\hline
+{\em fill} & -\/ default value for every entry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1Matrix_a24169476532305f1bb8229653274a5ba}\label{classmath_1_1Matrix_a24169476532305f1bb8229653274a5ba}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
+
+Copy constructor. Copies matrix m into new matrix. 
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ matrix to be copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1Matrix_afd52712eaef5a16115d605b7866a0576}\label{classmath_1_1Matrix_afd52712eaef5a16115d605b7866a0576}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!````~Matrix@{$\sim$\+Matrix}}
+\index{````~Matrix@{$\sim$\+Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{$\sim$\+Matrix()}{~Matrix()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::$\sim$\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. Deletes the matrix internally 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmath_1_1Matrix_aac510ef186a6bbf176d0ef4d79a7c666}\label{classmath_1_1Matrix_aac510ef186a6bbf176d0ef4d79a7c666}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!at@{at}}
+\index{at@{at}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+N \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::at (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{r,  }\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{c }\end{DoxyParamCaption}) const}
+
+Get element at r, c of the matrix 0-\/indexed. 
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ row of return element \\
+\hline
+{\em c} & -\/ column of return element \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & thrown if r$<$0 or r$>$=\hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()} or c$<$0 or c$>$=\hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}\label{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!cols@{cols}}
+\index{cols@{cols}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename N$>$ \\
+\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of columns in the matrix. \begin{DoxyReturn}{Returns}
+the number of columns in the matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1Matrix_aa5af962938db227b32efbf3ccb34ddba}\label{classmath_1_1Matrix_aa5af962938db227b32efbf3ccb34ddba}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename N$>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}\& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const N \&}]{scal }\end{DoxyParamCaption})}
+
+Adds Multiplies {\ttfamily this} by scaler {\ttfamily scal} 
+\begin{DoxyParams}{Parameters}
+{\em scal} & -\/ scaler to multiply {\ttfamily this} by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to {\ttfamily m} after multiplication 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1Matrix_ad5bce304ff86d69014b10c3e3a58b8a7}\label{classmath_1_1Matrix_ad5bce304ff86d69014b10c3e3a58b8a7}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename N$>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}\& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
+
+Performs matrix multiplication between {\ttfamily this} and {\ttfamily m}. This operation will throw an exception if {\ttfamily cols!=m.\+rows()}. It will also reshape {\ttfamily this} to that {\ttfamily \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()}} does not change and {\ttfamily \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()}} becomes {\ttfamily m.\+cols()}. 
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ matrix to multiply by {\ttfamily this}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to {\ttfamily this} after multiplication. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & if {\ttfamily \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()}!=m.\+rows()} matrix multiplication is undefined \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmath_1_1Matrix_ae2944c1e1a0f1958101db2197bcfaa3c}\label{classmath_1_1Matrix_ae2944c1e1a0f1958101db2197bcfaa3c}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
+
+Adds matrix {\ttfamily m} to {\ttfamily this} element-\/wise 
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ matrix to add to {\ttfamily this}. rows and cols must be equivalent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to {\ttfamily this} after addition 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & thrown if {\ttfamily \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()}!=m.\+rows()} or {\ttfamily \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()}!=m.\+cols()} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmath_1_1Matrix_a046b9f4717da34fb08795cb461497084}\label{classmath_1_1Matrix_a046b9f4717da34fb08795cb461497084}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
+
+Subtracts matrix {\ttfamily m} from {\ttfamily this} element-\/wise 
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ matrix to subtract from {\ttfamily this}. rows and cols must be equivalent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to {\ttfamily this} after subtraction 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & thrown if {\ttfamily \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()}!=m.\+rows()} or {\ttfamily \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()}!=m.\+cols()} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmath_1_1Matrix_a6a0a90575952ca84cac100cb40a5e9d0}\label{classmath_1_1Matrix_a6a0a90575952ca84cac100cb40a5e9d0}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily template$<$typename N$>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}\& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator/= (\begin{DoxyParamCaption}\item[{const N \&}]{scal }\end{DoxyParamCaption})}
+
+Divides {\ttfamily this} by scalar {\ttfamily scal} element-\/wise. Does not check for {\ttfamily scal==0} as division for class {\ttfamily N} might have non-\/standard definition. 
+\begin{DoxyParams}{Parameters}
+{\em scal} & -\/ scalar to divide {\ttfamily this} by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to {\ttfamily m} after division 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1Matrix_a8bf5d371b703ef3023742c4058f709a7}\label{classmath_1_1Matrix_a8bf5d371b703ef3023742c4058f709a7}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
+
+Copies {\ttfamily m} into {\ttfamily this}. Performs an element-\/wise copy. Ignores self-\/copy. 
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ matrix to copy into {\ttfamily this} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to {\ttfamily this} after copy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}\label{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!rows@{rows}}
+\index{rows@{rows}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename N$>$ \\
+\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of rows in the matrix. \begin{DoxyReturn}{Returns}
+the number of rows in the matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1Matrix_afbf9ebd6114faec44e9eccb553ca8f33}\label{classmath_1_1Matrix_afbf9ebd6114faec44e9eccb553ca8f33}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!set@{set}}
+\index{set@{set}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+void \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::set (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{r,  }\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{c,  }\item[{N}]{val }\end{DoxyParamCaption})}
+
+Set element at r, c of the matrix 0-\/indexed. 
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ row of element set \\
+\hline
+{\em c} & -\/ column of element set \\
+\hline
+{\em val} & -\/ value to set element at r,c \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & thrown if r$<$0 or r$>$=\hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()} or c$<$0 or c$>$=\hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmath_1_1Matrix_afbbadd025c9d60f4447cee97fd7c727d}\label{classmath_1_1Matrix_afbbadd025c9d60f4447cee97fd7c727d}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!shape@{shape}}
+\index{shape@{shape}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily template$<$typename N$>$ \\
+std\+::pair$<$\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}$>$ \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the shape or (rows, cols). This is equivalent to {\ttfamily std\+::make\+\_\+pair(\hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()}, \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()});} \begin{DoxyReturn}{Returns}
+an S\+TL pair containing the row count and column count 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}\label{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!size@{size}}
+\index{size@{size}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename N$>$ \\
+\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the size of the matrix ({\ttfamily \hyperlink{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}{size()} == \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()} $\ast$ \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()}}) \begin{DoxyReturn}{Returns}
+the size of the matrix 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/daniel/dev/cpp/math/include/\hyperlink{Matrix_8hpp}{Matrix.\+hpp}\end{DoxyCompactItemize}
