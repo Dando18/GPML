@@ -12,5 +12,11 @@ namespace math {
 /** shorthand for unsigned int type */
 typedef unsigned int uint;
 
+/** shorthand for unsigned long */
+typedef unsigned long ul;
+
+/** shorthand for unsigned long long */
+typedef unsigned long long ull;
+
 }
 #endif
