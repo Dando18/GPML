@@ -360,6 +360,58 @@ Matrix<N>& Matrix<N>::operator-=(const Matrix& m) {
 	return *this;
 }
 
+template<typename N>
+Matrix<N> operator-(Matrix<N> lhs, const Matrix<N>& rhs) {
+	// lhs is a copy, so use -=
+	lhs -= rhs;
+	return lhs;
+}
+
+
+template<typename N>
+Matrix<N>& Matrix<N>::operator*=(const N& scal) {
+	// multiply each element by scalar
+	for (int r = 0; r < _rows; ++r)
+		for (int c = 0; c < _cols; ++c)
+			_matrix[r][c] *= scal;
+	return *this;	
+}
+
+template<typename N>
+Matrix<N> operator*(Matrix<N> lhs, const N& scal) {
+	// lhs is a copy
+	lhs *= scal;
+	return lhs;
+}
+
+// define mult. for left->right since its commutative
+template<typename N>
+Matrix<N> operator*(const N& scal, Matrix<N> rhs) {
+	return rhs * scal;
+}
+
+
+template<typename N>
+Matrix<N>& Matrix<N>::operator*=(const Matrix& m) {
+	if (_cols != m._rows)
+		throw std::invalid_argument("Matrix Multiplication is undefined if m.rows() must equal cols().");
+
+	Matrix<N> result (_rows, m._cols);
+	
+	N sum;
+	for (int r = 0; r < _rows; ++r) {
+		for (int c = 0; c < m._cols; ++c) {
+			sum = N();
+			for (int i = 0; i < _cols; ++i)
+				sum += _matrix[r][i] * m._matrix[i][c];
+
+			result._matrix[r][c] = sum;
+		}
+	}
+	(*this) = result;
+	return *this;			
+}
+
 
 template<typename N>
 Matrix<N>::~Matrix() {
