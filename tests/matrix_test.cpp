@@ -5,11 +5,12 @@ template<typename T>
 void print(const math::Matrix<T>&);
 
 void test_construction();
-//void test_addition();
+void test_addition();
 
 int main(int argc, char** argv) {
 
 	test_construction();	
+	test_addition();
 
 	std::cout << std::endl;
 	return 0;
@@ -26,7 +27,7 @@ void print(const math::Matrix<T>& m) {
 }
 
 void test_construction() {
-	std::cout << "testing construction...\n";
+	std::cout << "\ntesting construction...\n";
 	
 	std::cout << "creating 4x6 init to 1\n";	
 	math::Matrix<int>* a = new math::Matrix<int> (4, 6, 1);
@@ -45,5 +46,32 @@ void test_construction() {
 	delete b;
 	delete c;
 	std::cout << "construction success\n";
+}
+
+void test_addition() {
+	std::cout << "\ntesting addition...\n";
+		
+	math::iMatrix* a = new math::iMatrix ( 2, 2, { {1,2}, {2,3} } );
+	math::iMatrix* b = new math::iMatrix ( 2, 2, { {4,3}, {3,2} } );
+	math::iMatrix* c = new math::iMatrix ( 1, 2, { {1,1} } );
+
+	print(*a);
+	std::cout << "+\n";
+	print(*b);
+	std::cout << "=\n";
+	print((*a) + (*b));
+
+	std::cout << "\ntesting adding matrices with different shapes...\n";
+	try {
+		print((*a) + (*c));
+	} catch (const std::exception& e) {
+		std::cout << "properly caught bad matrix addition with exception:\n\t" 
+				<< e.what() << "\n";
+	}
+
+	delete a;
+	delete b;
+	delete c;
+	std::cout << "addition success\n";
 }
 
