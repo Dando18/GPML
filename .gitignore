@@ -31,6 +31,7 @@
 *.out
 *.app
 tests/bin/*  # ignore built test files
+tests/bin/
 
 # doxygen config file
 doxconfig
