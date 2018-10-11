@@ -30,7 +30,7 @@
 *.exe
 *.out
 *.app
-tests/bin/  # ignore built test files
+tests/bin/*  # ignore built test files
 
 # doxygen config file
 doxconfig
