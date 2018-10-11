@@ -7,8 +7,9 @@
 #ifndef _MATRIX_H_
 #define _MATRIX_H_
 
-#include <utility>		// std::pair
-#include <stdexcept>	// std::invalid_argument
+#include <utility>		// pair, make_pair
+#include <stdexcept>	// invalid_argument
+#include <vector>		// vector
 #include "typedefs.h"	// uint
 
 
@@ -23,12 +24,13 @@ namespace math {
 template<typename N>
 class Matrix {
 	public:
+		// constructors
 		/** Square matrix constructor. Creates a size*size matrix
 			with every value set to fill.
 			@param size - size of the rows and cols of the matrix
 			@param fill - default value for every entry
 		*/
-		Matrix(uint size, N fill);
+		Matrix(uint size, const N& fill);
 
 		/** Matrix constructor. Creates a rows*cols matrix
 			with every value set to fill.
@@ -36,13 +38,45 @@ class Matrix {
 			@param cols - number of cols
 			@param fill - default value for every entry
 		*/
-		Matrix(uint rows, uint cols, N fill);
+		Matrix(uint rows, uint cols, const N& fill);
+		
+		/**	Creates and fills matrix with data from `N** data` array. Will seg-fault if
+			`data` is not `size * size`.
+			@param size - size of square matrix
+			@param data - 2d array of data to fill matrix
+		*/
+		Matrix(uint size, N** data);
+
+		/** Creates and fills matrix with data from `vector<vector<N> > data`. Will seg-fault
+			or ignore excess data if `data` is not `size * size`.
+			@param size - size of square matrix
+			@param data - 2d vector of data to fill matrix
+		*/
+		Matrix(uint size, const std::vector<std::vector<N> >& data);
+
+		/**	Creates and fills matrix with data from `N** data` array. Will seg-fault if
+			`data` is not `rows * cols`.
+			@param rows - number of rows in resulting matrix
+			@param cols - number of columns in resulting matrix
+			@param data - 2d array of data to fill matrix
+		*/
+		Matrix(uint rows, uint cols, N** data);
+
+		/** Creates and fills matrix with data from `vector<vector<N> > data`. Will seg-fault
+			or ignore excess data if `data` is not `rows * cols`.
+			@param rows - number of rows in resulting matrix
+			@param cols - number of cols in resulting matrix
+			@param data - 2d vector of data to fill matrix
+		*/
+		Matrix(uint rows, uint cols, const std::vector<std::vector<N> >& data);
 
 		/** Copy constructor. Copies matrix m into new matrix.
 			@param m - matrix to be copied
 		*/
 		Matrix(const Matrix& m);
 
+
+		// member functions
 		/** Get element at r, c of the matrix 0-indexed.
 			@param r - row of return element
 			@param c - column of return element
@@ -124,7 +158,9 @@ class Matrix {
 			@return a pointer to `m` after division
 		*/
 		Matrix& operator/=(const N& scal);
-		
+	
+	
+		// destructor	
 		/** Destructor. Deletes the matrix internally */
 		~Matrix();
 		
@@ -134,6 +170,8 @@ class Matrix {
 		uint _rows;		/**<number of rows in matrix*/
 		N** _matrix;	/**<internal array to store matrix data*/
 };
+
+
 
 // free standing operator declarations
 /**	Adds lhs and rhs matrices element-wise. Copies lhs and add rhs to it.
@@ -201,34 +239,16 @@ typedef Matrix<double> dMatrix;
 
 // implementation
 
-/*
-	initializes the matrix with dimensions size*size and 
-	sets each element to fill.
-	size - size of square matrixa
-	fill - default arg
-*/
+
 template<typename N>
-Matrix<N>::Matrix(uint size, N fill) : _size(size*size), _cols(size), _rows(size) {
-	// allocate rows
-	_matrix = new N*[_rows];
-
-	// allocate col in each row
-	for (uint r = 0; r < _rows; ++r) {
-		_matrix[r] = new N[_cols];
-
-		// set each value to fill
-		for (uint c = 0; c < _cols; ++c) {
-			_matrix[r][c] = fill;
-		}
-	}
-}
+Matrix<N>::Matrix(uint size, const N& fill) : Matrix(size, size, fill) {}
 
 
 /*
 	initilize with dimensions rows*cols and elements fill
 */
 template<typename N>
-Matrix<N>::Matrix(uint rows, uint cols, N fill) : _size(rows*cols), _cols(cols), _rows(rows) {
+Matrix<N>::Matrix(uint rows, uint cols, const N& fill) : _size(rows*cols), _cols(cols), _rows(rows) {
 	// allocate rows
 	_matrix = new N*[_rows];
 
@@ -237,12 +257,47 @@ Matrix<N>::Matrix(uint rows, uint cols, N fill) : _size(rows*cols), _cols(cols),
 		_matrix[r] = new N[_cols];
 
 		// set each value to fill
-		for (uint c = 0; c < _cols; ++c) {
+		for (uint c = 0; c < _cols; ++c)
 			_matrix[r][c] = fill;
-		}
 	}
 }
 
+template<typename N>
+Matrix<N>::Matrix(uint size, N** data) : Matrix(size, size, data) {}
+
+template<typename N>
+Matrix<N>::Matrix(uint rows, uint cols, N** data) : _size(rows*cols), _cols(cols), _rows(rows) {
+	// allocate rows
+	_matrix = new N*[_rows];
+
+	for (uint r = 0; r < _rows; ++r) {
+		// allocate columns
+		_matrix[r] = new N[_cols];
+
+		for (uint c = 0; c < _cols; ++c)
+			_matrix[r][c] = data[r][c];
+	}	
+}
+
+template<typename N>
+Matrix<N>::Matrix(uint size, const std::vector<std::vector<N> >& data) : Matrix(size, size, data) {}
+
+template<typename N>
+Matrix<N>::Matrix(uint rows, uint cols, const std::vector<std::vector<N> >& data) : _size(rows*cols), _cols(cols), _rows(rows) {
+	// allocate rows
+	_matrix = new N*[_rows];
+
+	for (uint r = 0; r < _rows; ++r) {
+		// allocate columns	
+		_matrix[r] = new N[_cols];
+
+		for (uint c = 0; c < _cols; ++c)
+			_matrix[r][c] = data[r][c];
+	}
+}
+
+
+// copy constructor
 template<typename N>
 Matrix<N>::Matrix(const Matrix& m) : _size(m.size()), _cols(m.cols()), _rows(m.rows()) {
 	// allocate rows
@@ -410,6 +465,30 @@ Matrix<N>& Matrix<N>::operator*=(const Matrix& m) {
 	}
 	(*this) = result;
 	return *this;			
+}
+
+
+template<typename N>
+Matrix<N> operator*(Matrix<N> lhs, const Matrix<N>& rhs) {
+	lhs *= rhs;
+	return rhs;
+}
+
+
+template<typename N>
+Matrix<N>& Matrix<N>::operator/=(const N& scal) {
+	// divide each element by scal
+	for (int r = 0; r < _rows; ++r) 
+		for (int c = 0; c < _cols; ++c)
+			_matrix[r][c] /= scal;
+
+	return *this;
+}
+
+template<typename N>
+Matrix<N> operator/(Matrix<N> lhs, const N& rhs) {
+	lhs /= rhs;
+	return lhs;
 }
 
 
