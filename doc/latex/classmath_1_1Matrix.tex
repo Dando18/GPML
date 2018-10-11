@@ -12,9 +12,17 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classmath_1_1Matrix_a766801644c0b1118db51d3d107daa732}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}{size}, N fill)
+\hyperlink{classmath_1_1Matrix_ab10d09aaec4eac52e268e1efe03fd98d}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}{size}, const N \&fill)
 \item 
-\hyperlink{classmath_1_1Matrix_a0ba68b8b43efb8402dbecc0531df0bb5}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows}, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols}, N fill)
+\hyperlink{classmath_1_1Matrix_a0533a95efb885436489e2d8a480bb8ea}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows}, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols}, const N \&fill)
+\item 
+\hyperlink{classmath_1_1Matrix_abaf73b37d2ce8d3d9af2c8571fbf7562}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}{size}, N $\ast$$\ast$data)
+\item 
+\hyperlink{classmath_1_1Matrix_a03acfd4595068a1dbfba6ab14dad2be7}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ae99135c51efc0077b694ab37ad64d5c0}{size}, const std\+::vector$<$ std\+::vector$<$ N $>$ $>$ \&data)
+\item 
+\hyperlink{classmath_1_1Matrix_aad0dcb59979136dc4d864bcc782f1d15}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows}, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols}, N $\ast$$\ast$data)
+\item 
+\hyperlink{classmath_1_1Matrix_a24b2432d600be2a86a1912f2e6e51f7a}{Matrix} (\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows}, \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint} \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols}, const std\+::vector$<$ std\+::vector$<$ N $>$ $>$ \&data)
 \item 
 \hyperlink{classmath_1_1Matrix_a24169476532305f1bb8229653274a5ba}{Matrix} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
 \item 
@@ -40,7 +48,7 @@ std\+::pair$<$ \hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}, 
 \item 
 \hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a4dbf1e0c5f42ce314ea2510a025b7e2a}{operator$\ast$=} (const \hyperlink{classmath_1_1Matrix}{Matrix} \&m)
 \item 
-\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a6a0a90575952ca84cac100cb40a5e9d0}{operator/=} (const N \&scal)
+\hyperlink{classmath_1_1Matrix}{Matrix} \& \hyperlink{classmath_1_1Matrix_a1145a22a8fa63ae3b8901184dd665e3a}{operator/=} (const N \&scal)
 \item 
 \hyperlink{classmath_1_1Matrix_afd52712eaef5a16115d605b7866a0576}{$\sim$\+Matrix} ()
 \end{DoxyCompactItemize}
@@ -61,12 +69,12 @@ October 2018
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classmath_1_1Matrix_a766801644c0b1118db51d3d107daa732}\label{classmath_1_1Matrix_a766801644c0b1118db51d3d107daa732}} 
+\mbox{\Hypertarget{classmath_1_1Matrix_ab10d09aaec4eac52e268e1efe03fd98d}\label{classmath_1_1Matrix_ab10d09aaec4eac52e268e1efe03fd98d}} 
 \index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
 \index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
-\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
 {\footnotesize\ttfamily template$<$typename N $>$ \\
-\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{size,  }\item[{N}]{fill }\end{DoxyParamCaption})}
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{size,  }\item[{const N \&}]{fill }\end{DoxyParamCaption})}
 
 Square matrix constructor. Creates a size$\ast$size matrix with every value set to fill. 
 \begin{DoxyParams}{Parameters}
@@ -75,12 +83,12 @@ Square matrix constructor. Creates a size$\ast$size matrix with every value set 
 {\em fill} & -\/ default value for every entry \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmath_1_1Matrix_a0ba68b8b43efb8402dbecc0531df0bb5}\label{classmath_1_1Matrix_a0ba68b8b43efb8402dbecc0531df0bb5}} 
+\mbox{\Hypertarget{classmath_1_1Matrix_a0533a95efb885436489e2d8a480bb8ea}\label{classmath_1_1Matrix_a0533a95efb885436489e2d8a480bb8ea}} 
 \index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
 \index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
-\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
 {\footnotesize\ttfamily template$<$typename N $>$ \\
-\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{rows,  }\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{cols,  }\item[{N}]{fill }\end{DoxyParamCaption})}
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{rows,  }\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{cols,  }\item[{const N \&}]{fill }\end{DoxyParamCaption})}
 
 \hyperlink{classmath_1_1Matrix}{Matrix} constructor. Creates a rows$\ast$cols matrix with every value set to fill. 
 \begin{DoxyParams}{Parameters}
@@ -91,10 +99,70 @@ Square matrix constructor. Creates a size$\ast$size matrix with every value set 
 {\em fill} & -\/ default value for every entry \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1Matrix_abaf73b37d2ce8d3d9af2c8571fbf7562}\label{classmath_1_1Matrix_abaf73b37d2ce8d3d9af2c8571fbf7562}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{size,  }\item[{N $\ast$$\ast$}]{data }\end{DoxyParamCaption})}
+
+Creates and fills matrix with data from {\ttfamily N$\ast$$\ast$ data} array. Will seg-\/fault if {\ttfamily data} is not {\ttfamily size $\ast$ size}. 
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ size of square matrix \\
+\hline
+{\em data} & -\/ 2d array of data to fill matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1Matrix_a03acfd4595068a1dbfba6ab14dad2be7}\label{classmath_1_1Matrix_a03acfd4595068a1dbfba6ab14dad2be7}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{size,  }\item[{const std\+::vector$<$ std\+::vector$<$ N $>$ $>$ \&}]{data }\end{DoxyParamCaption})}
+
+Creates and fills matrix with data from {\ttfamily vector$<$vector$<$N$>$ $>$ data}. Will seg-\/fault or ignore excess data if {\ttfamily data} is not {\ttfamily size $\ast$ size}. 
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ size of square matrix \\
+\hline
+{\em data} & -\/ 2d vector of data to fill matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1Matrix_aad0dcb59979136dc4d864bcc782f1d15}\label{classmath_1_1Matrix_aad0dcb59979136dc4d864bcc782f1d15}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{rows,  }\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{cols,  }\item[{N $\ast$$\ast$}]{data }\end{DoxyParamCaption})}
+
+Creates and fills matrix with data from {\ttfamily N$\ast$$\ast$ data} array. Will seg-\/fault if {\ttfamily data} is not {\ttfamily rows $\ast$ cols}. 
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ number of rows in resulting matrix \\
+\hline
+{\em cols} & -\/ number of columns in resulting matrix \\
+\hline
+{\em data} & -\/ 2d array of data to fill matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1Matrix_a24b2432d600be2a86a1912f2e6e51f7a}\label{classmath_1_1Matrix_a24b2432d600be2a86a1912f2e6e51f7a}} 
+\index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{rows,  }\item[{\hyperlink{typedefs_8h_a7b9b9413622e67b9df7f2d090b48682b}{uint}}]{cols,  }\item[{const std\+::vector$<$ std\+::vector$<$ N $>$ $>$ \&}]{data }\end{DoxyParamCaption})}
+
+Creates and fills matrix with data from {\ttfamily vector$<$vector$<$N$>$ $>$ data}. Will seg-\/fault or ignore excess data if {\ttfamily data} is not {\ttfamily rows $\ast$ cols}. 
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ number of rows in resulting matrix \\
+\hline
+{\em cols} & -\/ number of cols in resulting matrix \\
+\hline
+{\em data} & -\/ 2d vector of data to fill matrix \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classmath_1_1Matrix_a24169476532305f1bb8229653274a5ba}\label{classmath_1_1Matrix_a24169476532305f1bb8229653274a5ba}} 
 \index{math\+::\+Matrix@{math\+::\+Matrix}!Matrix@{Matrix}}
 \index{Matrix@{Matrix}!math\+::\+Matrix@{math\+::\+Matrix}}
-\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
 {\footnotesize\ttfamily template$<$typename N $>$ \\
 \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::\hyperlink{classmath_1_1Matrix}{Matrix} (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{m }\end{DoxyParamCaption})}
 
@@ -217,12 +285,12 @@ a pointer to {\ttfamily this} after subtraction
 {\em invalid\+\_\+argument} & thrown if {\ttfamily \hyperlink{classmath_1_1Matrix_a602173645d806afe305ed77b1ff38273}{rows()}!=m.\+rows()} or {\ttfamily \hyperlink{classmath_1_1Matrix_ad78b49e12a607856df124a18a855aaf1}{cols()}!=m.\+cols()} \\
 \hline
 \end{DoxyExceptions}
-\mbox{\Hypertarget{classmath_1_1Matrix_a6a0a90575952ca84cac100cb40a5e9d0}\label{classmath_1_1Matrix_a6a0a90575952ca84cac100cb40a5e9d0}} 
+\mbox{\Hypertarget{classmath_1_1Matrix_a1145a22a8fa63ae3b8901184dd665e3a}\label{classmath_1_1Matrix_a1145a22a8fa63ae3b8901184dd665e3a}} 
 \index{math\+::\+Matrix@{math\+::\+Matrix}!operator/=@{operator/=}}
 \index{operator/=@{operator/=}!math\+::\+Matrix@{math\+::\+Matrix}}
 \subsubsection{\texorpdfstring{operator/=()}{operator/=()}}
-{\footnotesize\ttfamily template$<$typename N$>$ \\
-\hyperlink{classmath_1_1Matrix}{Matrix}\& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator/= (\begin{DoxyParamCaption}\item[{const N \&}]{scal }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename N $>$ \\
+\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \& \hyperlink{classmath_1_1Matrix}{math\+::\+Matrix}$<$ N $>$\+::operator/= (\begin{DoxyParamCaption}\item[{const N \&}]{scal }\end{DoxyParamCaption})}
 
 Divides {\ttfamily this} by scalar {\ttfamily scal} element-\/wise. Does not check for {\ttfamily scal==0} as division for class {\ttfamily N} might have non-\/standard definition. 
 \begin{DoxyParams}{Parameters}

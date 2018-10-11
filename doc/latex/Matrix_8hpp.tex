@@ -2,12 +2,14 @@
 \label{Matrix_8hpp}\index{/home/daniel/dev/cpp/math/include/\+Matrix.\+hpp@{/home/daniel/dev/cpp/math/include/\+Matrix.\+hpp}}
 {\ttfamily \#include $<$utility$>$}\newline
 {\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include \char`\"{}typedefs.\+h\char`\"{}}\newline
-Include dependency graph for Matrix.\+hpp\+:\nopagebreak
+Include dependency graph for Matrix.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=278pt]{Matrix_8hpp__incl}
+\includegraphics[width=340pt]{Matrix_8hpp__incl}
 \end{center}
 \end{figure}
 \subsection*{Classes}
@@ -35,9 +37,9 @@ typedef Matrix$<$ double $>$ \hyperlink{Matrix_8hpp_a65b4179533da3857354550916c3
 \item 
 {\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a990777f6ce4e2deb13a59f23622fd8bc}{math\+::operator$\ast$} (const N \&lhs, Matrix$<$ N $>$ rhs)
 \item 
-{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a66c4aedee806ac605abc38c2b528e374}{math\+::operator/} (Matrix$<$ N $>$ lhs, const N \&rhs)
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a98e3ca1b2db938b945dc58ac8a02f49a}{math\+::operator/} (Matrix$<$ N $>$ lhs, const N \&rhs)
 \item 
-{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_ab82237960c54e9b78d0721613a773ba9}{math\+::operator$\ast$} (Matrix$<$ N $>$ lhs, const Matrix$<$ N $>$ \&rhs)
+{\footnotesize template$<$typename N $>$ }\\Matrix$<$ N $>$ \hyperlink{Matrix_8hpp_a6a581f190dd23d4400763318e86f9d53}{math\+::operator$\ast$} (Matrix$<$ N $>$ lhs, const Matrix$<$ N $>$ \&rhs)
 \end{DoxyCompactItemize}
 
 
@@ -106,12 +108,12 @@ Multiplies scalar lhs and matrix rhs. Copies rhs and multiplies by scalar lhs
 \begin{DoxyReturn}{Returns}
 a new matrix with elements multiplication of {\ttfamily lhs} and {\ttfamily rhs} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{Matrix_8hpp_file_ab82237960c54e9b78d0721613a773ba9}\label{Matrix_8hpp_file_ab82237960c54e9b78d0721613a773ba9}} 
+\mbox{\Hypertarget{Matrix_8hpp_file_a6a581f190dd23d4400763318e86f9d53}\label{Matrix_8hpp_file_a6a581f190dd23d4400763318e86f9d53}} 
 \index{Matrix.\+hpp@{Matrix.\+hpp}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Matrix.\+hpp@{Matrix.\+hpp}}
 \subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily template$<$typename N $>$ \\
-Matrix$<$N$>$ math\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{rhs }\end{DoxyParamCaption})}
+Matrix$<$ N $>$ math\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const \hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$ \&}]{rhs }\end{DoxyParamCaption})}
 
 Performs matrix multiplication of {\ttfamily rhs} and {\ttfamily lhs} 
 \begin{DoxyParams}{Parameters}
@@ -172,12 +174,12 @@ a new matrix with elements from element-\/wise subtraction of {\ttfamily lhs} an
 {\em invalid\+\_\+argument} & if {\ttfamily lhs} and {\ttfamily rhs} do not have same shape \\
 \hline
 \end{DoxyExceptions}
-\mbox{\Hypertarget{Matrix_8hpp_file_a66c4aedee806ac605abc38c2b528e374}\label{Matrix_8hpp_file_a66c4aedee806ac605abc38c2b528e374}} 
+\mbox{\Hypertarget{Matrix_8hpp_file_a98e3ca1b2db938b945dc58ac8a02f49a}\label{Matrix_8hpp_file_a98e3ca1b2db938b945dc58ac8a02f49a}} 
 \index{Matrix.\+hpp@{Matrix.\+hpp}!operator/@{operator/}}
 \index{operator/@{operator/}!Matrix.\+hpp@{Matrix.\+hpp}}
 \subsubsection{\texorpdfstring{operator/()}{operator/()}}
 {\footnotesize\ttfamily template$<$typename N $>$ \\
-Matrix$<$N$>$ math\+::operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const N \&}]{rhs }\end{DoxyParamCaption})}
+Matrix$<$ N $>$ math\+::operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{classmath_1_1Matrix}{Matrix}$<$ N $>$}]{lhs,  }\item[{const N \&}]{rhs }\end{DoxyParamCaption})}
 
 Divides lhs matrix by scalar rhs. Copies lhs and divides by scalar rhs. Does not check if rhs is zero due to unknown type of {\ttfamily N}. 
 \begin{DoxyParams}{Parameters}
