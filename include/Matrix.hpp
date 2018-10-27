@@ -112,6 +112,11 @@ class Matrix {
 		*/
 		uint size() const { return _size; }
 
+        
+        /** transposes this matrix
+        */
+        void T();
+
 
 		// overloaded operators
 
@@ -344,6 +349,17 @@ void Matrix<N>::set(uint r, uint c, N val) {
 		throw std::invalid_argument("column out of range");
 
 	_matrix[r][c] = val;
+}
+
+template<typename N>
+void Matrix<N>::T() {
+    if (_rows == 0 || _cols == 0) return;
+
+    Matrix t (_cols, _rows, 0);
+    for (uint r = 0; r < _rows; r++)
+        for (uint c = 0; c < _cols; c++)
+            t._matrix[c][r] = _matrix[r][c];
+    *this = t;
 }
 
 
